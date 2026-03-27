@@ -22,6 +22,14 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
+        <Link href="/tracing">
+          <ThemedText type="subtitle" style={{ color: '#0a7ea4', textDecorationLine: 'underline' }}>Letter Tracing Feature</ThemedText>
+        </Link>
+        <ThemedText>
+          Try the new interactive letter tracing guide!
+        </ThemedText>
+      </ThemedView>
+      <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.

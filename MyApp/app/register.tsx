@@ -18,9 +18,12 @@ export default function RegisterScreen() {
     }
     setLoading(true);
     try {
+      console.log("Starting user registration for email:", email);
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
+      console.log("Auth success. UID:", user.uid);
 
+      console.log("Attempting to create Firestore document in 'users' collection...");
       // Save user profile to Firestore
       await setDoc(doc(db, 'users', user.uid), {
         name,
@@ -29,9 +32,11 @@ export default function RegisterScreen() {
         level: 1,
         progress: {},
       });
+      console.log("Firestore document created successfully.");
 
       router.replace('/(tabs)');
     } catch (error: any) {
+      console.error("Registration Error Caught:", error);
       Alert.alert('Registration Failed', error.message);
     } finally {
       setLoading(false);

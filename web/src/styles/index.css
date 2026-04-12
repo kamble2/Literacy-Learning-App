@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Surfaces */
+  --bg:           #F6F3EC;
+  --surface:      #FFFFFF;
+  --surface-2:    #F0ECE3;
+  --border:       #E3DDD2;
+  --border-soft:  #EDE9E1;
+
+  /* Text */
+  --text:         #1A1714;
+  --text-2:       #6B6458;
+  --text-3:       #A09890;
+
+  /* Accent — deep indigo */
+  --accent:       #4338CA;
+  --accent-hover: #3730A3;
+  --accent-bg:    #EEF2FF;
+  --accent-text:  #3730A3;
+
+  /* Semantic */
+  --success:      #166534;
+  --success-bg:   #F0FDF4;
+  --success-line: #22C55E;
+  --error:        #991B1B;
+  --error-bg:     #FEF2F2;
+  --error-line:   #EF4444;
+
+  /* Module accent colors */
+  --mod-letters:  #4338CA;
+  --mod-sounds:   #B45309;
+  --mod-words:    #0F766E;
+  --mod-stories:  #9D174D;
+
+  /* Elevation */
+  --shadow-xs: 0 1px 2px rgba(26,23,20,0.05);
+  --shadow-sm: 0 1px 3px rgba(26,23,20,0.07), 0 2px 6px rgba(26,23,20,0.04);
+  --shadow:    0 2px 8px rgba(26,23,20,0.08), 0 1px 3px rgba(26,23,20,0.05);
+  --shadow-md: 0 4px 16px rgba(26,23,20,0.10), 0 1px 4px rgba(26,23,20,0.05);
+  --shadow-lg: 0 8px 32px rgba(26,23,20,0.12), 0 2px 8px rgba(26,23,20,0.06);
+
+  /* Radius */
+  --r-sm:  8px;
+  --r:     12px;
+  --r-lg:  20px;
+  --r-xl:  28px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input, button, textarea, select {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px var(--accent-bg) !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #FAFAF7 inset;
+  -webkit-text-fill-color: var(--text);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.card-lift {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.wordmark {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}

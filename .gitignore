@@ -1,0 +1,11 @@
+node_modules/
+web/node_modules/
+MyApp/node_modules/
+.env
+web/.env
+MyApp/.env
+.DS_Store
+web/.DS_Store
+web/dist/
+web/.vite/
+*.mp3
